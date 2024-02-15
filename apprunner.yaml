@@ -1,0 +1,11 @@
+version: 1.0
+runtime: python311
+build:
+  commands:
+    pre-build:
+    build:
+      - pip3 install pipenv
+      - pipenv install
+      - pip3 install -r requirements.txt
+run:
+  command: sicat.py
